@@ -3,8 +3,8 @@ var postmark = require('postmark');
 
 module.exports = Emailer;
 
-function Emailer(config, logger, client) {
-  this.client = client || new postmark.Client(config.key);
+function Emailer(config, logger) {
+  this.client = config.client || new postmark.Client(config.key);
   this.logger = logger;
   this.fromEmail = config.fromEmail;
   this.toEmails = config.toEmails;

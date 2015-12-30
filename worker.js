@@ -30,11 +30,11 @@ function worker(app) {
     app.logger.info('Worker loaded latest reminder', reminder);
 
     if (!reminder || reminder.datePassed()) {
-      return app.emailer.send('datePassed', reminder);
+      return app.datePassed(reminder);
     }
 
     if (reminder.dateUpcoming()) {
-      return app.emailer.send('dateUpcoming', reminder);
+      return app.dateUpcoming(reminder);
     }
   });
 }

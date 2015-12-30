@@ -4,6 +4,8 @@
   "dependencies": {
     "kerberos": "0.0.17",
     "mongoose": "^4.3.4",
-    "postmark": "^1.2.1"
+    "node-uuid": "^1.4.7",
+    "postmark": "^1.2.1",
+    "xtend": "^4.0.1"
   }
 }

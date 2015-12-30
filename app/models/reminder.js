@@ -1,5 +1,6 @@
 'use strict';
 var mongoose = require('mongoose');
+var uuid = require('node-uuid');
 
 module.exports = createReminder;
 
@@ -8,6 +9,10 @@ function createReminder(connection, config) {
   var emailWithinTimesAmount = emailWithinTimes.length;
 
   var Reminder = mongoose.Schema({
+    _id: {
+      type: String,
+      default: uuid.v1
+    },
     createdAt: {
       type: Date,
       default: Date.now

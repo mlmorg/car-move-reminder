@@ -4,11 +4,8 @@ module.exports = {
   worker: {
     interval: 1000 * 60 * 30, // 30 minutes
   },
-  reminder: {
-    emailWithinTimes: [
-      1000 * 60 * 60 * 24, // 24 hours
-      1000 * 60 * 60 * 2 // 2 hours
-    ]
+  db: {
+    url: 'mongodb://localhost/car-move-reminder'
   },
   emailer: {
     key: '12345',
@@ -24,5 +21,11 @@ module.exports = {
         body: ''
       }
     }
+  },
+  reminder: {
+    emailWithinTimes: [
+      1000 * 60 * 60 * 24, // 24 hours
+      1000 * 60 * 60 * 2 // 2 hours
+    ]
   }
 };
